@@ -11,6 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fd9b18ca-cf6e-46e8-a22c-fcd086a57a36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/slideshow.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/slideshow.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,14 +32,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="1" />
+          <entry key="css" value="2" />
           <entry key="html" value="1" />
           <entry key="jpg" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
+          <entry key="CSS" value="2" />
           <entry key="HTML" value="1" />
           <entry key="Image" value="1" />
         </counts>
@@ -46,14 +47,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="JavaScript Console" value="4" />
-          <entry key="css" value="2" />
-          <entry key="html" value="44" />
+          <entry key="css" value="3" />
+          <entry key="html" value="203" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="2" />
-          <entry key="HTML" value="44" />
+          <entry key="CSS" value="3" />
+          <entry key="HTML" value="203" />
           <entry key="JavaScript" value="4" />
         </counts>
       </usages-collector>
@@ -64,19 +65,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="106" column="40" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+            <state relative-caret-position="301">
+              <caret line="114" column="23" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/stylish-portfolio.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="917" selection-start-column="917" selection-end-column="917" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/slideshow.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -116,6 +122,11 @@
             <path>
               <item name="ethanjshang.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="ethanjshang.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ethanjshang.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ethanjshang.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ethanjshang.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -172,12 +183,12 @@
       <workItem from="1534635862148" duration="155000" />
       <workItem from="1534636177272" duration="26000" />
       <workItem from="1534636248965" duration="196000" />
-      <workItem from="1534636521899" duration="574000" />
+      <workItem from="1534636521899" duration="1513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2176000" />
+    <option name="totallyTimeSpent" value="3115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-141" y="-1050" width="1680" height="1050" extended-state="0" />
@@ -187,15 +198,15 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.60816324" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.2010204" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.25306123" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -213,17 +224,20 @@
     <entry file="file://$PROJECT_DIR$/w3images/garden.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/stylish-portfolio.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="106" column="40" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+        <state>
+          <caret column="917" selection-start-column="917" selection-end-column="917" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/slideshow.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        <state relative-caret-position="301">
+          <caret line="114" column="23" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
         </state>
       </provider>
     </entry>
