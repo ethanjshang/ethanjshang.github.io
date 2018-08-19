@@ -10,8 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd9b18ca-cf6e-46e8-a22c-fcd086a57a36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/slideshow.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/slideshow.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="356" column="48" lean-forward="true" selection-start-line="356" selection-start-column="48" selection-end-line="356" selection-end-column="48" />
+            <state relative-caret-position="285">
+              <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
               <folding>
                 <element signature="e#11476#11494#0" expanded="true" />
                 <element signature="e#11676#11694#0" expanded="true" />
@@ -199,24 +197,23 @@
       <workItem from="1534635862148" duration="155000" />
       <workItem from="1534636177272" duration="26000" />
       <workItem from="1534636248965" duration="196000" />
-      <workItem from="1534636521899" duration="2973000" />
+      <workItem from="1534636521899" duration="3398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4575000" />
+    <option name="totallyTimeSpent" value="5000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-141" y="-1050" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15628816" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15628816" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.33469388" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.33469388" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -256,8 +253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="356" column="48" lean-forward="true" selection-start-line="356" selection-start-column="48" selection-end-line="356" selection-end-column="48" />
+        <state relative-caret-position="285">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
             <element signature="e#11476#11494#0" expanded="true" />
             <element signature="e#11676#11694#0" expanded="true" />
