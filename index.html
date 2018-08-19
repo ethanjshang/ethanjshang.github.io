@@ -9,537 +9,469 @@
 <link rel="icon" href="/w3images/favicon.png">
 <!--<link rel="stylesheet" href="/css/slideshow.css"> -->
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-	height: 100%;
-	color: #777;
-	line-height: 1.8;
-}
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+    body, html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+    }
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+    }
+    /* Create a Parallax Effect */
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('/w3images/parallax1.jpg');
+        min-height: 90%;
+    }
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+        background-image: url("/w3images/parallax2.jpg");
+        min-height: 400px;
+    }
+    /* Third image (Contact) */
+    .bgimg-3 {
+        background-image: url("/w3images/parallax3.jpg");
+        min-height: 400px;
+    }
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+    }
+    /* End slideshow CSS */
 
-/* Slideshow container */
-.slideshow-container {
-    max-width: 800px;
-    max-height: 600px;
-    position: relative;
-    margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-}
-
-.container {
-    position: relative;
-    width: 50%;
-    max-width: 300px;
-}
-
-/* Make the image to responsive */
-.image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* The overlay effect - lays on top of the container and over the image */
-.overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
-    color: #f1f1f1;
-    width: 100%;
-    transition: .5s ease;
-    opacity:0;
-    color: white;
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
-}
-
-/* When you mouse over the container, fade in the overlay title */
-.container:hover .overlay {
-    opacity: 1;
-}
+    #social ul{
+        list-style: none;
+    }
+    #social li{
+        padding: 10px 40px;
+        display: inline;
+        font-size: 24px;
+    }
 
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-	background-image: url('/w3images/parallax1.jpg');
-	min-height: 90%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-	background-image: url("/w3images/parallax2.jpg");
-	min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-	background-image: url("/w3images/parallax3.jpg");
-	min-height: 400px;
-}
-
-
-
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-@media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-}
-
-/* End slideshow CSS */
-	
-#social ul{
-  list-style: none;
-}
-#social li{
-  padding: 10px 40px;
-  display: inline;
-  font-size: 24px;
-}
-	
-	
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-	.bgimg-1, .bgimg-2, .bgimg-3 {
-    	background-attachment: scroll;
-	}
-}
+    .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1024px) {
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+            background-attachment: scroll;
+        }
+    }
 </style>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-	<a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-  	<i class="fa fa-bars"></i>
-	</a>
-	<a href="#home" class="w3-bar-item w3-button">HOME</a>
-	<a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-	<a href="#portfolio_work" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-	<a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-	<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-  	<i class="fa fa-search"></i>
-	</a>
-  </div>
+    <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-button">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+        <a href="#portfolio_work" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+            <i class="fa fa-search"></i>
+        </a>
+    </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-	<a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-	<a href="#portfolio_work" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-	<a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-	<a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="#portfolio_work" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-animate-opacity" id="home">
-<!-- w opacity
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
--->
-  <div class="w3-display-middle" style="white-space:nowrap;">
- <!-- w w3-large
-	<span class="w3-center w3-padding-large w3-black w3-large w3-wide w3-animate-opacity">Innovator.<span class="w3-hide-small">Scholar.</span>Explorer</span>
-  -->
-<span class="w3-center w3-padding-large w3-black w3-small w3-wide w3-animate-opacity">Innovator.<span class="w3-hide-small">Scholar.</span>Explorer</span>
- </div>
+    <!-- w opacity
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    -->
+    <div class="w3-display-middle" style="white-space:nowrap;">
+        <!-- w w3-large
+           <span class="w3-center w3-padding-large w3-black w3-large w3-wide w3-animate-opacity">Innovator.<span class="w3-hide-small">Scholar.</span>Explorer</span>
+         -->
+        <span class="w3-center w3-padding-large w3-black w3-small w3-wide w3-animate-opacity">Innovator.<span class="w3-hide-small">Scholar.</span>Explorer</span>
+    </div>
 </div>
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">Hello, I'm Ethan.</h3>
-  <p class="w3-center"><em>Adventure Awaits</em></p>
-  <p></p>
-  <div class="w3-row">
-	<div class="w3-col m6 w3-center w3-padding-large">
-  	<!--
-    	<p><b><i class="fa fa-user w3-margin-right"></i>Ethan Shang</b></p><br>
-    	-->
-  	<img src="/w3images/Ethan2017b.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
-	</div>
-	<div class="w3-col m6 w3-padding-large">
-   	<p><b><i class="fa fa-user w3-margin-right"></i>ETHAN SHANG</b></p>
-    	<p>As a junior at UC Berkeley, I'm surrounded with new experiences. I'm a Regent's and Chancellor's Scholar, studying Electrical Engineering and Computer Science at UC Berkeley. I've also interned at Lawrence Livermore National Laboratory for three summers as a Computing Center Intern, a Computation Directorate Intern, and a Global Security Intern. Outside of school and work, I love to hike, travel, and find new, exciting places to eat! Feel free to contact me!</p>
-  	 <a href="EthanShang_Resume_G.pdf"  target="_blank" class="w3-button w3-light-grey"><i class="fa fa-newspaper-o w3-margin-right"></i>View my Resume</a>	
-	 <hr />
-	<div id="social">
-            <ul>
-               <li><a href="mailto:ethanshang@berkeley.edu"><i class="fa fa-envelope"></i></a></li>
-               <li><a href="https://www.linkedin.com/in/ethanjshang/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="https://www.instagram.com/ethanshang" target="_blank"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="https://www.github.com/ethanjshang" target="_blank"><i class="fa fa-github"></i></a></li>
-            </ul>
-	</div>
-	  
-	  </div>
-  </div>
-  <p class="w3-large w3-center w3-padding-16">I pride myself to be good at:</p>
-  <p class="w3-wide"><i class="fa fa-lightbulb-o"  style="font-size:18px"></i>Intellectual Pursuit</p>
-  <div class="w3-light-grey">
-	<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-soccer-ball-o"></i>Sports</p>
-  <div class="w3-light-grey">
-	<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-comments-o"></i>Listening</p>
-  <div class="w3-light-grey">
-	<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
+    <h3 class="w3-center">Hello, I'm Ethan.</h3>
+    <p class="w3-center"><em>Adventure Awaits</em></p>
+    <p></p>
+    <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+            <!--
+              <p><b><i class="fa fa-user w3-margin-right"></i>Ethan Shang</b></p><br>
+              -->
+            <img src="/w3images/Ethan2017b.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+        </div>
+        <div class="w3-col m6 w3-padding-large">
+            <p><b><i class="fa fa-user w3-margin-right"></i>ETHAN SHANG</b></p>
+            <p>As a junior at UC Berkeley, I'm surrounded with new experiences. I'm a Regent's and Chancellor's Scholar, studying Electrical Engineering and Computer Science at UC Berkeley. I've also interned at Lawrence Livermore National Laboratory for three summers as a Computing Center Intern, a Computation Directorate Intern, and a Global Security Intern. Outside of school and work, I love to hike, travel, and find new, exciting places to eat! Feel free to contact me!</p>
+            <a href="EthanShang_Resume_G.pdf"  target="_blank" class="w3-button w3-light-grey"><i class="fa fa-newspaper-o w3-margin-right"></i>View my Resume</a>
+            <hr />
+            <div id="social">
+                <ul>
+                    <li><a href="mailto:ethanshang@berkeley.edu"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/ethanjshang/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/ethanshang" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.github.com/ethanjshang" target="_blank"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <p class="w3-large w3-center w3-padding-16">I pride myself to be good at:</p>
+    <p class="w3-wide"><i class="fa fa-lightbulb-o"  style="font-size:18px"></i>Intellectual Pursuit</p>
+    <div class="w3-light-grey">
+        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-soccer-ball-o"></i>Sports</p>
+    <div class="w3-light-grey">
+        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-comments-o"></i>Listening</p>
+    <div class="w3-light-grey">
+        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+    </div>
 </div>
 
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-	<span class="w3-xlarge">School</span><br>
-    
-  </div>
-  <div class="w3-quarter w3-section">
-	<span class="w3-xlarge">Work</span><br>
-    
-  </div>
-  <div class="w3-quarter w3-section">
-	<span class="w3-xlarge">Community</span><br>
-    
-  </div>
-  <div class="w3-quarter w3-section">
-	<span class="w3-xlarge">Business</span><br>
-    
-  </div>
+    <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">School</span><br>
+
+    </div>
+    <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">Work</span><br>
+
+    </div>
+    <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">Community</span><br>
+
+    </div>
+    <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">Business</span><br>
+
+    </div>
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-	<span class="w3-xxlarge w3-text-white w3-wide">WORK AND PLAY</span>
-  </div>
+    <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">WORK AND PLAY</span>
+    </div>
 </div>
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio_work">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center">A journey in computer science.</p>
+    <h3 class="w3-center">MY WORK</h3>
+    <p class="w3-center">A journey in computer science.</p>
 
-	<!-- Work Section -->
-<div class="w3-container">
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-  <div class="w3-col l3 m3 w3-margin-bottom">
-  	<!--  <div class="w3-col l6 m6 w3-margin-bottom">
--->
-  	<div class="w3-card">
-    	<img src="/w3images/sofware_eng.jpg" alt="LLNL" style="width:100%">
-    	<div class="w3-container">
-      	<h4>Software Engineering Intern</h4>
-      	<p class="w3-opacity">Lawrence Livermore National Laboratory</p>
-      	<p>Data analytic tool to improve supercomputer performance — automating analysis by integrating disparate data.</p>
-      	<p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More Info</button></p>
-    	</div>
-  	</div>
-	</div>
-  <div class="w3-col l3 m3 w3-margin-bottom">
-  	<div class="w3-card">
-    	<img src="/w3images/ml.jpeg" alt="RISELAB" style="width:100%">
-    	<div class="w3-container">
-      	<h4>Research Assistant</h4>
-      	<p class="w3-opacity">RISE Lab UC Berkeley</p>
-      	<p>Clipper: A prediction serving system connecting user-facing applications and machine learning.</p>
-      	<p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More Info</button></p>
-    	</div>
-  	</div>
-	</div>
- <div class="w3-col l3 m3 w3-margin-bottom">
-  	<div class="w3-card">
-    	<img src="/w3images/students.jpg" alt="TA" style="width:100%">
-    	<div class="w3-container">
-      	<h4>Academic Intern</h4>
-      	<p class="w3-opacity">UC Berkeley Course Staff</p>
-      	<p>Managing 2000+ students in a single class? All in a day's work.</p>
-        <ul>
-          <li>Structure and Interpretation of Computer Programs</li>
-          <li>Data Structures and Algorithms</li>
-        </ul>
-      	<p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More Info</button></p>
-    	</div>
-  	</div>
-	</div>
- <div class="w3-col l3 m3 w3-margin-bottom">
-  	<div class="w3-card">
-    	<img src="/w3images/security.jpg" alt="LLNL" style="width:100%">
-    	<div class="w3-container">
-      	<h4>Computation Intern</h4>
-      	<p class="w3-opacity">Lawrence Livermore National Laboratory</p>
-      	<p>Data mining, data visualizations, and assessment of the Department of Energy’s vast network to improve threat detection.</p>
-      	<p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More Info</button></p>
-    	</div>
-  	</div>
-	</div>
-	</div>
-	</div>
+    <!-- Work Section -->
+    <div class="w3-container">
+        <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+            <div class="w3-col l3 m3 w3-margin-bottom">
+                <!--  <div class="w3-col l6 m6 w3-margin-bottom">
+          -->
+                <div class="w3-card">
+                    <img src="/w3images/sofware_eng.jpg" alt="LLNL" style="width:100%">
+                    <div class="w3-container">
+                        <h4>Software Engineering Intern</h4>
+                        <p class="w3-opacity">Lawrence Livermore National Laboratory</p>
+                        <p>Data analytic tool to improve supercomputer performance — automating analysis by integrating disparate data.</p>
+                        <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More Info</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m3 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="/w3images/ml.jpeg" alt="RISELAB" style="width:100%">
+                    <div class="w3-container">
+                        <h4>Research Assistant</h4>
+                        <p class="w3-opacity">RISE Lab UC Berkeley</p>
+                        <p>Clipper: A prediction serving system connecting user-facing applications and machine learning.</p>
+                        <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More Info</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m3 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="/w3images/students.jpg" alt="TA" style="width:100%">
+                    <div class="w3-container">
+                        <h4>Academic Intern</h4>
+                        <p class="w3-opacity">UC Berkeley Course Staff</p>
+                        <p>Managing 2000+ students in a single class? All in a day's work.</p>
+                        <ul>
+                            <li>Structure and Interpretation of Computer Programs</li>
+                            <li>Data Structures and Algorithms</li>
+                        </ul>
+                        <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More Info</button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l3 m3 w3-margin-bottom">
+                <div class="w3-card">
+                    <img src="/w3images/security.jpg" alt="LLNL" style="width:100%">
+                    <div class="w3-container">
+                        <h4>Computation Intern</h4>
+                        <p class="w3-opacity">Lawrence Livermore National Laboratory</p>
+                        <p>Data mining, data visualizations, and assessment of the Department of Energy’s vast network to improve threat detection.</p>
+                        <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-info-circle"></i> More Info</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Play container -->
-    <div class="w3-content w3-container w3-padding-64" id="portfolio_play">
-        <h3 class="w3-center">Where I've Been</h3>
-    </div>
+<div class="w3-content w3-container w3-padding-64" id="portfolio_play">
+    <h3 class="w3-center">Where I've Been</h3>
+</div>
 
-  <div class="slideshow-container">
+<div class="slideshow-container">
 
-  <!-- Full-width images with number and caption text -->
+    <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
-      <div class="numbertext">1 / 4</div>
-      <img src="/w3images/garden.jpg" alt="Monet's Garden" style="width:100%">
-      <div class="overlay">Monet's Garden, France</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 4</div>
-      <img src="/w3images/palace.jpg" alt="Winter Palace" style="width:100%">
-      <div class="overlay">Winter Palace, Russia</div>
+        <div class="numbertext">1 / 4</div>
+        <img src="/w3images/garden.jpg" alt="Monet's Garden" style="width:100%">
+        <div class="overlay">Monet's Garden, France</div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">3 / 4</div>
-      <img src="/w3images/pantheon.jpg" alt="Pantheon" style="width:100%">
-      <div class="overlay">Pantheon, Italy</div>
+        <div class="numbertext">2 / 4</div>
+        <img src="/w3images/palace.jpg" alt="Winter Palace" style="width:100%">
+        <div class="overlay">Winter Palace, Russia</div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">4 / 4</div>
-      <img src="/w3images/yosemite.jpg" alt="Yosemite" style="width:100%">
-      <div class="overlay">Yosemite, US</div>
+        <div class="numbertext">3 / 4</div>
+        <img src="/w3images/pantheon.jpg" alt="Pantheon" style="width:100%">
+        <div class="overlay">Pantheon, Italy</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="/w3images/yosemite.jpg" alt="Yosemite" style="width:100%">
+        <div class="overlay">Yosemite, US</div>
 
     </div>
 
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
 <br>
 
 <!-- The dots/circles -->
 <div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
 </div>
- 
+
 
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
- 	<span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
+    <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+    </div>
 </div>
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK AND PLAY</h3>
-  <p class="w3-center"><em>Contact Me</em></p>
+    <h3 class="w3-center">WHERE I WORK AND PLAY</h3>
+    <p class="w3-center"><em>Contact Me</em></p>
 
-  <div class="w3-row w3-padding-16 w3-section">
-	<div class="w3-col w3-container">
-  	<div class="w3-large w3-center w3-margin-bottom">
-    	<i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Berkeley, CA<br>
-    	<i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +1 925 321-9181<br>
-    	<i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Mail: <a href="mailto:ethanshang@berkeley.edu">ethanshang@berkeley.edu</a><br>
-  	</div>
-	</div>
-</div>
+    <div class="w3-row w3-padding-16 w3-section">
+        <div class="w3-col w3-container">
+            <div class="w3-large w3-center w3-margin-bottom">
+                <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Berkeley, CA<br>
+                <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +1 925 321-9181<br>
+                <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Mail: <a href="mailto:ethanshang@berkeley.edu">ethanshang@berkeley.edu</a><br>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
 </footer>
- 
+
 
 <!-- Add Google Maps
 function myMap()
@@ -551,7 +483,6 @@ function myMap()
 	mapTypeId:google.maps.MapTypeId.ROADMAP
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
   var marker = new google.maps.Marker({
 	position: myCenter,
   });
@@ -559,68 +490,59 @@ function myMap()
 }
 -->
 <script>
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-	if (mySidebar.style.display === 'block') {
-    	mySidebar.style.display = 'none';
-	} else {
-    	mySidebar.style.display = 'block';
-	}
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-	mySidebar.style.display = "none";
-}
-	
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
+    // Modal Image Gallery
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
     }
-}
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+    function w3_open() {
+        if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+        } else {
+            mySidebar.style.display = 'block';
+        }
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-}
 
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
 </script>
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script> -->
 <!--
@@ -630,5 +552,3 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 
 </body>
 </html>
-
-
