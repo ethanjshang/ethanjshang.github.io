@@ -127,6 +127,16 @@
         position: relative;
         margin: auto;
     }
+
+    div.shadow {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    div.paddedborder {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+    }
+
     /* Hide the images by default */
     .mySlides {
         display: none;
@@ -225,7 +235,7 @@
         }
     }
 </style>
-<body>
+<!-- >
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -400,7 +410,7 @@
     <h3 class="w3-center">Where I've Been</h3>
 </div>
 
-<div class="slideshow-container">
+<div class="slideshow-container w3-border shadow paddedborder">
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
